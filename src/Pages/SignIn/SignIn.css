@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #14161A;
+    font-family: Montserrat;
+}
+.form-container{
+    background-color: white;
+    width: 450px;
+    padding: 2rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.form-container h2 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: black;
+
+}
+
+.form-container form {
+    margin: 0.5rem 0;
+}
+
+.form-control icon {
+    position: relative;
+    color: black;
+}
+
+.form-control .icon {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-size: 1.5rem;
+}
+form button{
+    width: 100%;
+    background: slateblue;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    padding: 1rem 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 40px;
+}
+
+.form-control input{
+    width: 100%;
+    border: 1.5px solid black;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
