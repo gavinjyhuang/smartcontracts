@@ -1,9 +1,8 @@
 import './SignUp.css'
 import React from 'react'
-import { CiLock, CiUser, MdAlternateEmail } from 'react-icons/ci'
-import { MdAlternateEmail } from 'react-icons/md'
+import { CiLock, CiUser, CiAt } from 'react-icons/ci'
 
-const SignUp = () => {
+const SignUp = (FormHandle) => {
   return (
     <h1>
     <div className = "form-container" >
@@ -17,7 +16,7 @@ const SignUp = () => {
 
             <div className = "form-control">
                 <input type="email" placeholder="Enter your email address" />
-                <MdAlternateEmail className = "icon" />
+                <CiAt className = "icon" />
             </div>
 
             <div className = "form-control">
@@ -28,7 +27,9 @@ const SignUp = () => {
             <button>Sign Up</button>
         </form>
 
-        <p>Already have an account?</p>
+        <p onClick={()=> FormHandle('signin')}>
+          Already have an account?
+          </p>
     </div>
     </h1>
   )

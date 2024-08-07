@@ -4,9 +4,18 @@ import Header from './components/Header';
 import Homepage from './Pages/Homepage';
 import CoinPage from './Pages/CoinPage';
 import SignIn from './Pages/SignIn/SignIn';
-// import SignUp from './Pages/SignIn/SignUp';
+import SignUp from './Pages/SignUp/SignUp';
+import { useState } from 'react';
 
 function App() {
+  const[Form, setForm] = useState('login')
+
+  {Form === 'login' ?(
+    <SignIn FormHandle = {setForm}/>
+  ) : (
+    <SignUp FormHandle = {setForm}/>
+  )}
+
   return (
     <BrowserRouter>
       <div
@@ -19,7 +28,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/signin" element = {<SignIn />}/>
+          <Route path="/account/:temp" element = {Form === 'login' ?(
+    <SignIn FormHandle = {setForm}/>
+  ) : (
+    <SignUp FormHandle = {setForm}/>
+  )} />
           <Route path="/coins/:id" element={<CoinPage />} />
         </Routes>
       </div>
