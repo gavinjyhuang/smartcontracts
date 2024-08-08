@@ -2,8 +2,7 @@ import React from 'react';
 import { AppBar, Container, Toolbar, Typography, Select, MenuItem, ThemeProvider, createTheme, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { CryptoState } from '../CryptoContext';
-import { CiUser } from 'react-icons/ci';
-import { CiLock } from 'react-icons/ci';
+import AuthModal from './Authentication/AuthModal';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -43,18 +42,15 @@ const { currency, setCurrency } = CryptoState()
               sx={{
                 width: 100,
                 height: 40,
-                marginRight: 5,
+                marginRight: 3,
               }}
               value = {currency}
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"GTQ"}>GTQ</MenuItem>
               <MenuItem value={"EUR"}>EUR</MenuItem>
             </Select>
-            <Button variant="contained" onClick = {() => {
-              navigate("/signin")
-            }}>Sign In</Button>
+            <AuthModal/>
           </Toolbar>
         </Container>
       </AppBar>

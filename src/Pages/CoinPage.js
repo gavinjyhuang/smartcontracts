@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
-import CoinInfo from '../components/Banner/CoinInfo';
+import CoinInfo from '../components/CoinInfo';
 import { SingleCoin } from '../config/api';
 import { numberWithCommas } from '../components/CoinsTable';
 import { CryptoState } from '../CryptoContext';
